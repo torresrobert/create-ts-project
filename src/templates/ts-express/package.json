@@ -1,0 +1,61 @@
+{
+    "name": "<%= projectName %>",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "scripts": {
+        "clean": "rimraf dist/",
+        "tsc": "tsc",
+        "build": "npm-run-all clean tsc",
+        "start": "node ."
+    },
+    "jest": {
+        "testEnvironment": "node",
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js"
+        ],
+        "transform": {
+            "^.+\\(ts|tsx)$": "ts-jest"
+        },
+        "globals": {
+            "ts-jest": {
+                "tsConfig": "tsconfig.json"
+            }
+        },
+        "testPathIgnorePatterns": [
+            "<rootDir>/controller"
+        ],
+        "modulePathIgnorePatterns": [
+            "<rootDir>/dist/"
+        ],
+        "testMatch": [
+            "**/tests/*.+(ts|tsx|js)"
+        ]
+    },
+    "author": {
+        "name": "Robert Torres",
+        "email": "torresrobert@me.com",
+        "url": "https://torresrobert.com"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "@types/jest": "^25.1.0",
+        "@types/supertest": "^2.0.8",
+        "@typescript-eslint/eslint-plugin": "^2.22.0",
+        "@typescript-eslint/parser": "^2.22.0",
+        "npm-run-all": "^4.1.5",
+        "pjson": "^1.0.9",
+        "eslint": "^6.8.0",
+        "dotenv": "^8.2.0",
+        "eslint-config-prettier": "^6.10.0",
+        "eslint-plugin-prettier": "^3.1.2",
+        "typescript": "^3.7.5",
+        "express": "^4.17.1",
+        "@types/express": "^4.11.1",
+        "@types/body-parser": "^1.17.0",
+        "ts-node": "^8.6.2",
+        "prettier": "^1.19.1",
+        "supertest": "^4.0.2"
+    }
+}

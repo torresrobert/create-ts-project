@@ -1,0 +1,48 @@
+{
+    "name": "create-ts-project",
+    "version": "1.0.0",
+    "description": "project generator to help bootstrap new typescript projects.",
+    "main": "index.js",
+    "scripts": {
+        "start": "ts-node src/index.ts",
+        "build": "tsc && shx rm -rf dist/templates && shx cp -r src/templates dist"
+    },
+    "bin": {
+        "create-ts-project": "./dist/index.js"
+    },
+    "author": {
+        "name": "Robert Torres",
+        "email": "torresrobert@me.com",
+        "url": "https://torresrobert.com"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@types/ejs": "^3.0.1",
+        "@types/inquirer": "^6.5.0",
+        "@types/yargs": "^15.0.4",
+        "@typescript-eslint/eslint-plugin": "^2.21.0",
+        "@typescript-eslint/parser": "^2.21.0",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.10.0",
+        "eslint-plugin-prettier": "^3.1.2",
+        "inquirer": "^7.0.4",
+        "prettier": "^1.19.1",
+        "tmp": "^0.2.1",
+        "ts-node": "^8.6.2",
+        "typescript": "^3.8.2"
+    },
+    "dependencies": {
+        "@types/body-parser": "^1.19.0",
+        "@types/express": "^4.17.3",
+        "@types/node": "^13.7.7",
+        "@types/shelljs": "^0.8.6",
+        "chalk": "^3.0.0",
+        "dotenv": "^8.2.0",
+        "ejs": "^3.0.1",
+        "express": "^4.17.1",
+        "pjson": "^1.0.9",
+        "shelljs": "^0.8.4",
+        "shx": "^0.3.2",
+        "yargs": "^15.4.1"
+    }
+}
